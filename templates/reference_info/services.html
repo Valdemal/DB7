@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Услуги {% endblock %}
+{% block main %}
+
+<h2>Список услуг</h2>
+<table>
+    <tr><th>Название услуги</th><th>Отрасль медицины</th></tr>
+    {% for service in services %}
+    <tr><td>{{ service.name }}</td><td>{{ service.branch.name }}</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

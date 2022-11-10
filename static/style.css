@@ -1,0 +1,99 @@
+html {
+    background-color: #D8F5FF;
+    color: #050F52;
+}
+
+header {
+    background-color: #B5ECFF;
+    text-align: left;
+    height: 4rem;
+    border-radius: 5px;
+    padding-left: 1rem;
+    line-height: 3.5rem;
+}
+
+a {
+    color: #050F52;
+    text-decoration: none;
+}
+
+header a {
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+main {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+main h2 {
+    margin-left: 10px;
+}
+
+.content-item {
+    border: solid 1px;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    padding-left: 10px;
+    background-color: #B5ECFF;
+}
+
+.list {
+    margin: 0;
+    counter-reset: li;
+    list-style: none;
+    padding: 10px 10px 10px 0;
+}
+
+.list li {
+    position: relative;
+    margin: 0 0 10px 2em;
+    padding: 4px 8px;
+    border-top: 2px solid #B5ECFF;
+    transition: .3s linear;
+}
+
+.list li:last-child {
+    margin-bottom: 0;
+}
+
+.list li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    top: -2px;
+    left: -2em;
+    width: 2em;
+    box-sizing: border-box;
+    margin-right: 8px;
+    padding: 4px;
+    border-top: 2px solid #B5ECFF;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    background: #B5ECFF;
+    font-weight: bold;
+    text-align: center;
+    transition: .3s linear;
+}
+
+table {
+  font-size: 16px;
+  max-width: 70%;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  font-weight: normal;
+  border-bottom: 2px solid #82E0FF;
+  padding: 10px 8px;
+}
+
+td {
+  padding: 9px 8px;
+  transition: .3s linear;
+}

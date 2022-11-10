@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} Отрасли медицины {% endblock %}
+{% block main %}
+
+<h2>Список отраслей медицины</h2>
+<ul class="list">
+    {% for branch in branches_of_medicine %}
+    <li>{{ branch.name }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

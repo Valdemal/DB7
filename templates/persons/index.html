@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Люди {% endblock %}
+{% block main %}
+
+<div class="info">
+    В это разделе вы сможете найти информацию о людях (пациентах и докторах).
+</div>
+
+<ol class="list">
+    <li><a href="{% url 'persons:doctors' %}">Доктора</a></li>
+    <li><a href="{% url 'persons:patients' %}">Пациенты</a></li>
+</ol>
+
+{% endblock %}

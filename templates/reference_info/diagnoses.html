@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Диагнозы {% endblock %}
+{% block main %}
+
+<h2>Список диагнозов</h2>
+<table>
+    <tr><th>Название диагноза</th><th>Отрасль медицины</th></tr>
+    {% for diagnosis in diagnoses %}
+    <tr><td>{{ diagnosis.name }}</td><td>{{ diagnosis.branch.name }}</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

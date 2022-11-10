@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} Заключения {% endblock %}
+{% block main %}
+
+<h2>Заключения</h2>
+{% for conclusion in conclusions %}
+<div class="content-item">
+    <p>Пациент: {{ conclusion.patient.surname }} {{ conclusion.patient.name }}</p>
+    <p>Заболевание: {{ conclusion.diagnosis.name }}</p>
+    <p>Доктор: {{ conclusion.doctor.surname }} {{ conclusion.doctor.name }}</p>
+    <p>Время регистрации: {{ conclusion.registration_time }}</p>
+    <p>Статус: {{ conclusion.status }}</p>
+    {% if conclusion.description %}
+    <div>
+        Описание: {{ conclusion.description }}
+    </div>
+    {% endif %}
+</div>
+<br>
+{% endfor %}
+
+{% endblock %}

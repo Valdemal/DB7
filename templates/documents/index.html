@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Документы {% endblock %}
+{% block main %}
+
+<div class="info">
+    Раздел сайта посвященный документам. Здесь вы сможете найти информацию о направлениях, заключениях и других документах
+</div>
+
+<ol class="list">
+    <li><a href="{% url 'documents:referrals' %}">Направления</a></li>
+    <li><a href="{% url 'documents:conclusions' %}">Заключения</a></li>
+</ol>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Направления {% endblock %}
+{% block main %}
+
+<h2>Направления</h2>
+{% for referral in referrals %}
+<div class="content-item">
+    <p>Услуга: {{ referral.service.name }}</p>
+    <p>Пациент: {{ referral.patient.surname }} {{ referral.patient.name }}</p>
+    <p>Доктор: {{ referral.doctor.surname }} {{ referral.doctor.name }}</p>
+    <p>Время приема: {{ referral.appointment_time }}</p>
+    <p>Кабинет: {{ referral.cabinet }}</p>
+    <p>Результат: {{ referral.result }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}

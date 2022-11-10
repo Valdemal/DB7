@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        Больница
+        {% endblock %}
+    </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'index' %}">Главная</a>
+        <a href="{% url 'reference_info:index' %}">Справочная информация</a>
+        <a href="{% url 'persons:index' %}">Люди</a>
+        <a href="{% url 'documents:index' %}">Документы</a>
+    </header>
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+</body>
+</html>
