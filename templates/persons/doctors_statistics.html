@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} Статистика докторов {% endblock %}
+{% block main %}
+
+<h2>Статистика докторов</h2>
+<table>
+    <tr>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Количество выписанных направлений</th>
+        <th>Специализация</th>
+    </tr>
+    {% for doctor in doctors %}
+    <tr>
+        <td>{{ doctor.surname }}</td>
+        <td>{{ doctor.name }}</td>
+        <td>{{ doctor.referrals_count }}</td>
+        <td>{{ doctor.specialization__name }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+
+{% endblock %}

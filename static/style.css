@@ -80,20 +80,42 @@ main h2 {
 }
 
 table {
-  font-size: 16px;
-  max-width: 70%;
-  width: 70%;
-  border-collapse: collapse;
-  text-align: left;
+    font-size: 16px;
+    max-width: 70%;
+    width: 70%;
+    border-collapse: collapse;
+    text-align: left;
 }
 
 th {
-  font-weight: normal;
-  border-bottom: 2px solid #82E0FF;
-  padding: 10px 8px;
+    font-weight: normal;
+    border-bottom: 2px solid #82E0FF;
+    padding: 10px 8px;
 }
 
 td {
-  padding: 9px 8px;
-  transition: .3s linear;
+    padding: 9px 8px;
+    transition: .3s linear;
+
+}
+
+main form {
+    margin-left: 10px;
+}
+
+main form button {
+    background-color: #82E0FF;
+    color: #050F52;
+    border-radius: 2px;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+main form input[type="date"] {
+    background-color: #82E0FF;
+    color: #050F52;
+    border-radius: 2px;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
 }
