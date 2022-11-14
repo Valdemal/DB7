@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} Справочная информация {% endblock %}
+{% block main %}
+
+<div class="info">
+    В это разделе находится справочная информация для медиков.
+</div>
+
+<ol class="list">
+    <li><a href="{% url 'reference_info:branches_of_medicine' %}">Отрасли медицины</a></li>
+    <li><a href="{% url 'reference_info:diagnoses' %}">Диагнозы</a></li>
+    <li><a href="{% url 'reference_info:services' %}">Услуги</a></li>
+    <li><a href="{% url 'reference_info:diagnoses_cases' %}">Отчет по количеству заболеваний</a></li>
+</ol>
+
+{% endblock %}

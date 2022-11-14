@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Доктора {% endblock %}
+{% block main %}
+
+<h2>Доктора</h2>
+{% for doctor in doctors %}
+<div class="content-item">
+    <p>Имя: {{ doctor.name }}</p>
+    <p>Фамилия: {{ doctor.surname }}</p>
+    
+    {% if doctor.patronymic %}
+    <p>Отчество: {{ doctor.patronymic }}</p>
+    {% endif %}
+
+    <p>Специализация: {{ doctor.specialization.name }}</p>
+    <p>Дата рождения: {{ doctor.date_of_birth }}</p>
+    <p>Номер телефона: {{ doctor.phone }}</p>
+    
+    {% if patient.email %}
+    <p>Email: {{ doctor.email }}</p>
+    {% endif %}
+</div>
+{% endfor %}
+
+{% endblock %}
