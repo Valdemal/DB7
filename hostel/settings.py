@@ -66,15 +66,8 @@ WSGI_APPLICATION = 'hostel.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'localhost',
-        'PORT': '5432',
-        'USER': 'postgres',
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'NAME': 'hostel_db',
-        'OPTIONS': {
-            'options': '-c search_path=reference_info,persons,documents,public'
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

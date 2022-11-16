@@ -6,15 +6,15 @@ from reference_info.models import Service, Diagnosis
 
 class Referral(models.Model):
     patient = models.ForeignKey(
-        Patient, models.DO_NOTHING, verbose_name='Пациент', db_column='patient'
+        Patient, models.DO_NOTHING, verbose_name='Пациент'
     )
 
     doctor = models.ForeignKey(
-        Doctor, models.DO_NOTHING, verbose_name='Доктор', db_column='doctor'
+        Doctor, models.DO_NOTHING, verbose_name='Доктор'
     )
 
     service = models.ForeignKey(
-        Service, models.DO_NOTHING, verbose_name='Услуга', db_column='service'
+        Service, models.DO_NOTHING, verbose_name='Услуга'
     )
 
     registration_time = models.DateTimeField(verbose_name='Время регистрации', auto_now_add=True)
@@ -34,23 +34,21 @@ class Referral(models.Model):
     )
 
     class Meta:
-        managed = False
-        db_table = 'referral'
         verbose_name = 'Направление'
         verbose_name_plural = 'Направление'
 
 
 class Conclusion(models.Model):
     patient = models.ForeignKey(
-        Patient, models.DO_NOTHING, verbose_name='Пациент', db_column='patient'
+        Patient, models.DO_NOTHING, verbose_name='Пациент'
     )
 
     doctor = models.ForeignKey(
-        Doctor, models.DO_NOTHING, verbose_name='Доктор', db_column='doctor'
+        Doctor, models.DO_NOTHING, verbose_name='Доктор'
     )
 
     diagnosis = models.ForeignKey(
-        Diagnosis, models.DO_NOTHING, verbose_name='Услуга', db_column='diagnosis'
+        Diagnosis, models.DO_NOTHING, verbose_name='Услуга'
     )
 
     registration_time = models.DateTimeField(verbose_name='Время регистрации', auto_now_add=True)
@@ -69,7 +67,5 @@ class Conclusion(models.Model):
     description = models.TextField(blank=True, null=True, verbose_name='Описание')
 
     class Meta:
-        managed = False
-        db_table = 'conclusion'
         verbose_name = 'Заключение'
         verbose_name_plural = 'Заключения'

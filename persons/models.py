@@ -5,9 +5,7 @@ from reference_info.models import BranchOfMedicine
 
 class Doctor(models.Model):
     specialization = models.ForeignKey(
-        BranchOfMedicine, models.DO_NOTHING,
-        verbose_name='Специализация',
-        db_column='specialization'
+        BranchOfMedicine, models.DO_NOTHING, verbose_name='Специализация',
     )
 
     name = models.CharField(max_length=75, verbose_name='Имя')
@@ -18,8 +16,6 @@ class Doctor(models.Model):
     email = models.CharField(max_length=100, blank=True, null=True, verbose_name='Email')
 
     class Meta:
-        managed = False
-        db_table = 'doctor'
         verbose_name = 'Доктор'
         verbose_name_plural = 'Доктора'
 
@@ -33,7 +29,5 @@ class Patient(models.Model):
     email = models.CharField(max_length=100, blank=True, null=True, verbose_name='Email')
 
     class Meta:
-        managed = False
-        db_table = 'patient'
         verbose_name = 'Пациент'
         verbose_name_plural = 'Пациенты'
